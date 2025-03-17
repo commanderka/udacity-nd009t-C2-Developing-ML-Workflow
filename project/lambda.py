@@ -78,7 +78,7 @@ def lambda_handler(event, context):
     inferences = json.loads(event["inferences"])
     
     # Check if any values in our inferences are above THRESHOLD
-    meets_threshold = inferences[0] > THRESHOLD or inferences[1] > threshold
+    meets_threshold = inferences[0] > THRESHOLD or inferences[1] > THRESHOLD
     
     # If our threshold is met, pass our data back out of the
     # Step Function, else, end the Step Function with an error
